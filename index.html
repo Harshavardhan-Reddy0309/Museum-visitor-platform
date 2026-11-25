@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CurioPass | Smart Museum Visitor Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">🏛️ CurioPass</div>
+    <nav class="nav-links">
+      <a href="#planner">Interest Planner</a>
+      <a href="#catalogue">Exhibit Catalogue</a>
+      <a href="#route">Smart Visit Route</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <span class="badge">Interactive Visitor Experience Platform</span>
+    <h1>Short on Time? Explore Only What Fascinates You.</h1>
+    <p>Filter our 40,000 sq. ft. collection by your personal interests, bookmark must-see artifacts, and follow a smart floor-by-floor route.</p>
+    <a href="#planner" class="primary-btn">Start Customizing My Visit ↓</a>
+  </section>
+
+  <!-- Main Interactive Section (CSS Radio Filter System) -->
+  <main id="planner" class="container">
+    
+    <!-- Step 1: Visitor Interest & Time Filter Controls -->
+    <div class="filter-box">
+      <h2>Step 1: Choose Your Interest or Time Limit</h2>
+      <p class="subtext">Select a mood below to highlight matching exhibits instantly:</p>
+    </div>
+
+    <!-- Hidden Radio Inputs for Pure CSS Filtering -->
+    <input type="radio" name="filter" id="filter-all" checked>
+    <input type="radio" name="filter" id="filter-quick">
+    <input type="radio" name="filter" id="filter-history">
+    <input type="radio" name="filter" id="filter-space">
+    <input type="radio" name="filter" id="filter-art">
+
+    <!-- Visible Filter Buttons -->
+    <div class="filter-tabs">
+      <label for="filter-all" class="tab">All Exhibits (6)</label>
+      <label for="filter-quick" class="tab">⚡ 30-Min Express Picks</label>
+      <label for="filter-history" class="tab">🏺 Ancient History</label>
+      <label for="filter-space" class="tab">🚀 Space & Innovation</label>
+      <label for="filter-art" class="tab">🎨 Fine Art & Sculptures</label>
+    </div>
+
+    <!-- Step 2: Exhibit Catalogue Grid -->
+    <section id="catalogue" class="catalogue-section">
+      <h2>Step 2: Browse & Bookmark Your Favorites</h2>
+      <p class="subtext">Click <strong>"Save to My Tour"</strong> on cards you want to visit, or expand details for gallery locations.</p>
+
+      <div class="exhibit-grid">
+
+        <!-- Exhibit 1 -->
+        <article class="card history quick">
+          <div class="card-top">
+            <span class="tag history-tag">Ancient History</span>
+            <span class="time-tag">⏱ 10 mins</span>
+          </div>
+          <h3>The Rosetta Stone Replica</h3>
+          <p class="summary">Discover the ancient trilingual decree that unlocked Egyptian hieroglyphics for modern scholars.</p>
+          
+          <!-- Pure HTML Expandable Details -->
+          <details class="details-box">
+            <summary>View Exhibit Details</summary>
+            <div class="details-content">
+              <p><strong>Location:</strong> Ground Floor, Gallery A1</p>
+              <p><strong>Era:</strong> 196 BC (Ptolemaic Dynasty)</p>
+              <p><strong>Highlight:</strong> Side-by-side translation screen available.</p>
+            </div>
+          </details>
+
+          <!-- Pure CSS Favorite Toggle -->
+          <div class="card-footer">
+            <input type="checkbox" id="fav-1" class="fav-checkbox">
+            <label for="fav-1" class="fav-btn">
+              <span class="unsaved">☆ Save to My Tour</span>
+              <span class="saved">★ Saved in My Tour</span>
+            </label>
+          </div>
+        </article>
+
+        <!-- Exhibit 2 -->
+        <article class="card space quick">
+          <div class="card-top">
+            <span class="tag space-tag">Space & Innovation</span>
+            <span class="time-tag">⏱ 12 mins</span>
+          </div>
+          <h3>Apollo 11 Lunar Command Module</h3>
+          <p class="summary">Step inside a full-scale cutaway of the spacecraft that carried humanity to the Moon.</p>
+          
+          <details class="details-box">
+            <summary>View Exhibit Details</summary>
+            <div class="details-content">
+              <p><strong>Location:</strong> First Floor, Space Wing B2</p>
+              <p><strong>Era:</strong> 1969 AD</p>
+              <p><strong>Highlight:</strong> Original flight checklist & moon rock sample.</p>
+            </div>
+          </details>
+
+          <div class="card-footer">
+            <input type="checkbox" id="fav-2" class="fav-checkbox">
+            <label for="fav-2" class="fav-btn">
+              <span class="unsaved">☆ Save to My Tour</span>
+              <span class="saved">★ Saved in My Tour</span>
+            </label>
+          </div>
+        </article>
+
+        <!-- Exhibit 3 -->
+        <article class="card art quick">
+          <div class="card-top">
+            <span class="tag art-tag">Fine Art</span>
+            <span class="time-tag">⏱ 8 mins</span>
+          </div>
+          <h3>Starry Night Immersive Room</h3>
+          <p class="summary">Experience Van Gogh’s brushwork projected across a 360-degree acoustic gallery space.</p>
+          
+          <details class="details-box">
+            <summary>View Exhibit Details</summary>
+            <div class="details-content">
+              <p><strong>Location:</strong> Second Floor, Atrium C1</p>
+              <p><strong>Era:</strong> 1889 (Post-Impressionism)</p>
+              <p><strong>Highlight:</strong> Interactive color-palette breakdown wall.</p>
+            </div>
+          </details>
+
+          <div class="card-footer">
+            <input type="checkbox" id="fav-3" class="fav-checkbox">
+            <label for="fav-3" class="fav-btn">
+              <span class="unsaved">☆ Save to My Tour</span>
+              <span class="saved">★ Saved in My Tour</span>
+            </label>
+          </div>
+        </article>
+
+        <!-- Exhibit 4 -->
+        <article class="card history">
+          <div class="card-top">
+            <span class="tag history-tag">Ancient History</span>
+            <span class="time-tag">⏱ 20 mins</span>
+          </div>
+          <h3>Indus Valley Bronze Artifacts</h3>
+          <p class="summary">Explore urban seals, pottery, and metallurgy from Harappa and Mohenjo-daro civilizations.</p>
+          
+          <details class="details-box">
+            <summary>View Exhibit Details</summary>
+            <div class="details-content">
+              <p><strong>Location:</strong> Ground Floor, Gallery A4</p>
+              <p><strong>Era:</strong> 2500 BCE</p>
+              <p><strong>Highlight:</strong> 3D reconstructed city drainage & dockyard model.</p>
+            </div>
+          </details>
+
+          <div class="card-footer">
+            <input type="checkbox" id="fav-4" class="fav-checkbox">
+            <label for="fav-4" class="fav-btn">
+              <span class="unsaved">☆ Save to My Tour</span>
+              <span class="saved">★ Saved in My Tour</span>
+            </label>
+          </div>
+        </article>
+
+        <!-- Exhibit 5 -->
+        <article class="card space">
+          <div class="card-top">
+            <span class="tag space-tag">Space & Innovation</span>
+            <span class="time-tag">⏱ 15 mins</span>
+          </div>
+          <h3>ISRO Mars Orbiter (Mangalyaan) Model</h3>
+          <p class="summary">Inspect the engineering blueprint behind India’s historic first interplanetary mission.</p>
+          
+          <details class="details-box">
+            <summary>View Exhibit Details</summary>
+            <div class="details-content">
+              <p><strong>Location:</strong> First Floor, Space Wing B5</p>
+              <p><strong>Era:</strong> 2013–2014 AD</p>
+              <p><strong>Highlight:</strong> High-resolution Martian surface photographs.</p>
+            </div>
+          </details>
+
+          <div class="card-footer">
+            <input type="checkbox" id="fav-5" class="fav-checkbox">
+            <label for="fav-5" class="fav-btn">
+              <span class="unsaved">☆ Save to My Tour</span>
+              <span class="saved">★ Saved in My Tour</span>
+            </label>
+          </div>
+        </article>
+
+        <!-- Exhibit 6 -->
+        <article class="card art">
+          <div class="card-top">
+            <span class="tag art-tag">Fine Art</span>
+            <span class="time-tag">⏱ 18 mins</span>
+          </div>
+          <h3>Chola Dynasty Bronze Sculptures</h3>
+          <p class="summary">Admire lost-wax cast bronze masterpieces showcasing intricate South Indian temple artistry.</p>
+          
+          <details class="details-box">
+            <summary>View Exhibit Details</summary>
+            <div class="details-content">
+              <p><strong>Location:</strong> Second Floor, Heritage Hall C3</p>
+              <p><strong>Era:</strong> 10th–12th Century AD</p>
+              <p><strong>Highlight:</strong> Magnified metalwork casting display.</p>
+            </div>
+          </details>
+
+          <div class="card-footer">
+            <input type="checkbox" id="fav-6" class="fav-checkbox">
+            <label for="fav-6" class="fav-btn">
+              <span class="unsaved">☆ Save to My Tour</span>
+              <span class="saved">★ Saved in My Tour</span>
+            </label>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Step 3: Recommended Visit Route -->
+    <section id="route" class="route-section">
+      <h2>Step 3: Smart Floor-by-Floor Visit Route</h2>
+      <p class="subtext">Follow this loop to avoid backtracking and cover top exhibits smoothly:</p>
+
+      <div class="route-steps">
+        <div class="step-card">
+          <span class="step-number">Stop 1</span>
+          <h3>Ground Floor — Gallery A1 & A4</h3>
+          <p>Start at the Main Lobby entrance → <strong>Rosetta Stone Replica</strong> → <strong>Indus Valley Artifacts</strong>.</p>
+          <span class="step-meta">Est. Walking + Viewing: 30 mins</span>
+        </div>
+
+        <div class="route-arrow">➔</div>
+
+        <div class="step-card">
+          <span class="step-number">Stop 2</span>
+          <h3>First Floor — Space Wing B2 & B5</h3>
+          <p>Take the Central Escalator up → <strong>Apollo 11 Module</strong> → <strong>ISRO Mangalyaan Model</strong>.</p>
+          <span class="step-meta">Est. Walking + Viewing: 27 mins</span>
+        </div>
+
+        <div class="route-arrow">➔</div>
+
+        <div class="step-card">
+          <span class="step-number">Stop 3</span>
+          <h3>Second Floor — Atrium C1 & Hall C3</h3>
+          <p>Finish on the top level → <strong>Starry Night Room</strong> → <strong>Chola Bronze Sculptures</strong> → Rooftop Café.</p>
+          <span class="step-meta">Est. Walking + Viewing: 26 mins</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Simple Footer -->
+  <footer class="footer">
+    <p>CurioPass — Museum Visitor Experience Platform | Built with Pure HTML5 & CSS3</p>
+  </footer>
+
+</body>
+</html>
